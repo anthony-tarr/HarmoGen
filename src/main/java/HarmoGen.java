@@ -72,13 +72,7 @@ public class HarmoGen {
 	private static HarmonyCompleteDialog harmonyView;
 	
 	//Methods
-	
-	/**
-	 * Reads in a midi file, using the note on MidiEvent to determine
-	 * what notes are being played.
-	 * 
-	 * @param fileName - The name of the file to read in.
-	 */
+
 	public static void readMidi(File file) throws Exception {
 		Sequence sequence = MidiSystem.getSequence(file);
 		Track[] tracks = sequence.getTracks();
@@ -100,13 +94,7 @@ public class HarmoGen {
 		
 		createNotesArray(noteBytes);
 	}
-	
-	/**
-	 * Reads a text file and returns its contents as the note string.
-	 * 
-	 * @param fileName - The name of the text file to be read.
-	 */
-	
+
 	public static void readText(File file){
 		try {
 			input = new BufferedReader(new FileReader(file));
